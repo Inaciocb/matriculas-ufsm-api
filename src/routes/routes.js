@@ -9,6 +9,8 @@ const SalaController = require('../controllers/sala');
 const TurmaController = require('../controllers/turma');
 const TurmaAlunoController = require('../controllers/turma-aluno');
 
+const TurmaHorarioController = require('../controllers/turma-horario');
+
 router.get('/centros', CentroController.get);
 router.post('/centros', CentroController.post);
 router.put('/centros', CentroController.put);
@@ -52,5 +54,7 @@ router.post('/turmas-alunos', TurmaAlunoController.post);
 router.put('/turmas-alunos', TurmaAlunoController.put);
 router.delete('/turmas-alunos', TurmaAlunoController.delete);
 router.get('/turmas-alunos/situacao/:matricula', TurmaAlunoController.getTurmasAluno);
+router.get('/turmas/:id_turma/horarios', TurmaHorarioController.get);
+
 
 module.exports = router;
